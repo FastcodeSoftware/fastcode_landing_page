@@ -160,9 +160,19 @@ const showBanner = ref(true)
   max-height: 400px; /* Adjust as needed */
   object-fit: cover; /* Ensures the image covers the entire space without distortion */
 }
-h1, h2, h3 {
+h1 {
   font-family: "Kanit", sans-serif;
   font-weight: 400;
+  font-style: normal;
+}
+h2 {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+h3 {
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
   font-style: normal;
 }
 </style>
