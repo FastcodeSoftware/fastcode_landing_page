@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
-
+import fastcodeBanner from '../assets/fastcode_banner.jpg'
+import fastcodeIcon from '../assets/fastcode_logo.png'
 const services = [
   { title: 'เงื่อนไข', content: 'รายละเอียดเงื่อนไขการทำงาน การส่งมอบ และการชำระเงิน' },
   { title: 'โปรเจ็กที่เคยทำ', content: 'ผลงานที่ผ่านมาของเรา รวมถึงเว็บไซต์ แอปพลิเคชัน และระบบต่าง ๆ' },
@@ -15,22 +16,69 @@ const contactLinks = [
   { icon: 'mdi-line', label: 'Line', href: 'https://line.me/R/ti/p/@your_line_id' },
 ]
 
+const showBanner = ref(true)
 </script>
 
 <template>
+  <!-- Top Banner -->
+    <v-img
+      :src="fastcodeBanner"
+      alt="Top Banner Image"
+      width="100%"
+      class="top-banner"
+      cover
+    >
+    </v-img>
+
+   <!-- Cards Between Banner and Body -->
+   <v-container fluid class="py-4" style="margin-top: -10rem">
+    <v-row class="justify-center"  dense>
+      <!-- Card 1: รับเขียนโค้ด -->
+      <v-col cols="3" sm="3" >
+        <v-card class="py-15 text-center" rounded elevation="2" >
+          <v-icon size="48" class="mb-2">mdi-code-tags</v-icon>
+          <h3 class="mb-2 font-weight-bold">รับเขียนโค้ด</h3>
+          <p>บริการพัฒนาโค้ดตามความต้องการของคุณ</p>
+        </v-card>
+      </v-col>
+
+      <!-- Card 2: รับทำโปรเจ็ค -->
+      <v-col cols="3" sm="3" >
+        <v-card class="py-15 text-center" rounded elevation="2">
+          <v-icon size="48" class="mb-2">mdi-briefcase-check</v-icon>
+          <h3 class="mb-2 font-weight-bold">รับทำโปรเจ็ค</h3>
+          <p>จัดทำโปรเจ็กต์ขนาดเล็กจนถึงระบบใหญ่</p>
+        </v-card>
+      </v-col>
+
+      <!-- Card 3: รับปรึกษางาน -->
+      <v-col cols="3" sm="3" >
+        <v-card class="py-15 text-center" rounded elevation="2">
+          <v-icon size="48" class="mb-2">mdi-account-tie</v-icon>
+          <h3 class="mb-2 font-weight-bold">รับปรึกษางาน</h3>
+          <p>ให้คำปรึกษา แนะนำแนวทางการพัฒนาโปรเจ็กต์</p>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
+
+
   <v-container fluid class="py-10">
     <!-- Hero Section -->
     <v-row class="align-center justify-center text-center">
-      <v-col cols="12" md="8">
-        <h1 class="display-3 font-weight-bold mb-4">Fast Code</h1>
+      <v-col cols="3" md="2">
+        <v-img :src="fastcodeIcon" width="100%"  ></v-img>
+      </v-col>
+      <v-col cols="12" md="7">
+   
         <h2 class="subtitle-1 mb-6">รับจ้างเขียนโค้ด - โปรเจ็ค - ปรึกษางาน</h2>
         <p class="mb-8">
           เราคือ Software House ที่พร้อมให้บริการด้วยความน่าเชื่อถือและคุณภาพ
           ไม่ว่าจะเป็นงานเว็บไซต์ แอปพลิเคชัน หรือระบบซับซ้อน เราพร้อมตอบโจทย์
           ความต้องการของคุณ
         </p>
-        <v-btn color="secondary" class="mx-2" elevation="1">ติดต่อเรา</v-btn>
-        <v-btn color="primary" outlined class="mx-2">ดูผลงาน</v-btn>
+        <v-btn color="secondary" class="mx-2 px-10" style="text-align: center;"  elevation="1">ติดต่อเรา</v-btn>
+        <v-btn color="primary" outlined class="mx-2 px-10" style="text-align: center;" >ดูผลงาน</v-btn>
       </v-col>
     </v-row>
 
@@ -64,7 +112,6 @@ const contactLinks = [
           เว็บไซต์องค์กร แพลตฟอร์มอีคอมเมิร์ซ ระบบจองห้องประชุม และแอปพลิเคชันมือถือ
           ลูกค้าของเรามาจากทั้งในประเทศและต่างประเทศ
         </p>
-        <!-- Example Portfolio Cards -->
         <v-row>
           <v-col cols="12" sm="6" md="4" class="mb-4" v-for="n in 3" :key="n">
             <v-card class="pa-4" rounded>
@@ -109,7 +156,13 @@ const contactLinks = [
 </template>
 
 <style scoped>
+.top-banner {
+  max-height: 400px; /* Adjust as needed */
+  object-fit: cover; /* Ensures the image covers the entire space without distortion */
+}
 h1, h2, h3 {
-  font-weight: 700;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 </style>
