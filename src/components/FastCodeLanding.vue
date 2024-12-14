@@ -16,8 +16,8 @@ const services = [
 ]
 
 const contactLinks = [
-  { icon: 'mdi-twitter', label: 'X', href: 'https://twitter.com/your_account' },
-  { icon: 'mdi-instagram', label: 'IG', href: 'https://instagram.com/your_account' },
+  { icon: 'mdi-twitter', label: 'X', href: 'https://x.com/fastcode_sw?s=21' },
+  { icon: 'mdi-instagram', label: 'IG', href: 'https://www.instagram.com/fastcode_sw?igsh=Z2dhbW4ybzFiZWhm' },
   { icon: 'mdi-facebook', label: 'FB', href: 'https://facebook.com/your_page' },
   { icon: 'mdi-line', label: 'Line', href: 'https://line.me/R/ti/p/@214xxhec' },
 ]
