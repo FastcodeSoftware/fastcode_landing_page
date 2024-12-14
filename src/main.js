@@ -16,7 +16,7 @@ const customTheme = {
   colors: {
     primary: '#ff914d',
     secondary: '#000000',
-    background: '#ffffff',
+    background: '#FAF9F6',
     surface: '#ffffff',
     error: '#f44336',
     info: '#2196f3',
@@ -29,7 +29,7 @@ const customDarkTheme = {
   dark: true,
   colors: {
     primary: '#ff914d',
-    secondary: '#000000',
+    secondary: '#1E1E1E',
     background: '#121212',
     surface: '#1E1E1E',
     error: '#f44336',

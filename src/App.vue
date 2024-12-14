@@ -11,7 +11,7 @@ function toggleTheme() {
 
 <template>
   <v-app :theme="isDark ? 'dark' : 'light'">
-    <v-app-bar app density="comfortable" color="primary" dark>
+    <v-app-bar app density="comfortable" color="white" dark>
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
       <v-toolbar-title>Fast Code</v-toolbar-title>
       <v-spacer></v-spacer>
